@@ -21,7 +21,7 @@ function randomDestGener (array) {
 }
 
 // (5 points): As a user, I want a restaurant to be randomly selected for my day trip.
-
+// add some code here
 
 // (5 points): As a user, I want a mode of transportation to be randomly selected for my day trip.
 
