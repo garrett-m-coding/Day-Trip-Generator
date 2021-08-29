@@ -19,7 +19,7 @@ function randomDestGener (array) {
     return randI;
 }
 let randomNumber = randomDestGener(destinations);
-let randomDestination = destinations[randomNumber];
+let randomDestination = destinations[randomNumber]; 
 console.log(randomDestination);
 
 // (5 points): As a user, I want a restaurant to be randomly selected for my day trip.
@@ -33,14 +33,14 @@ let randomRestaurant = restaurants[random2Number];
 console.log(randomRestaurant);
 
 // (5 points): As a user, I want a mode of transportation to be randomly selected for my day trip.
-// let destinations = ['Crowley','Burleson','Mansfield','Saginaw','Keller','Arlington','Fort Worth'];
-// function randomDestGener (array) {
-//     let randI = Math.floor(Math.random()*array.length-1);
-//     return randI;
-// }
-// let randomNumber = randomDestGener(destinations);
-// let randomDestination = destinations[randomNumber];
-// console.log(randomDestination);
+let modesOfTransport = ['Car','Individual Bicycle','Tandem Bicycle','Horse and Carriage','Walk','Jog','Roller Blade','Bus'];
+function randomTransportGener (array) {
+    let randI = Math.floor(Math.random()*array.length-1);
+    return randI;
+}
+let random3Number = randomDestGener(modesOfTransport);
+let randomTransportation = modesOfTransport[randomNumber];
+console.log(randomTransportation);
 
 // (5 points): As a user, I want a form of entertainment to be randomly selected for my day trip.
 // let destinations = ['Crowley','Burleson','Mansfield','Saginaw','Keller','Arlington','Fort Worth'];
