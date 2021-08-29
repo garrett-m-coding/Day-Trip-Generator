@@ -14,41 +14,41 @@
 console.log('Welcome & thank you for choosing the Fort Worth, Texas - Day Trip Planner!')
 
 let destinations = ['Crowley','Burleson','Mansfield','Saginaw','Keller','Arlington','Fort Worth'];
-function randomDestGener (array) {
-    let randI = Math.floor(Math.random()*array.length-1);
+function getRandNumber(min, max) {
+    let randI = Math.floor(Math.random() * (max - min) ) + min;
     return randI;
 }
-let randomNumber = randomDestGener(destinations);
-let randomDestination = destinations[randomNumber]; 
+let randomNumber = getRandNumber(0, destinations.length);
+let randomDestination = destinations[randomNumber];
 console.log(randomDestination);
 
 // (5 points): As a user, I want a restaurant to be randomly selected for my day trip.
 let restaurants = ['Restaurant A','Restaurant B','Restaurant C','Restaurant D','Restaurant E','Restaurant F','Restaurant G'];
-function randomRestGener (array) {
-    let randI = Math.floor(Math.random()*array.length-1);
+function getRandNumber(min, max) {
+    let randI = Math.floor(Math.random() * (max - min) ) + min;
     return randI;
 }
-let random2Number = randomRestGener(restaurants);
+let random2Number = getRandNumber(0, restaurants.length);
 let randomRestaurant = restaurants[random2Number];
 console.log(randomRestaurant);
 
 // (5 points): As a user, I want a mode of transportation to be randomly selected for my day trip.
 let modesOfTransport = ['Car','Individual Bicycle','Tandem Bicycle','Horse and Carriage','Walk','Jog','Roller Blade','Bus'];
-function randomTransportGener (array) {
-    let randI = Math.floor(Math.random()*array.length-1);
+function getRandNumber(min, max) {
+    let randI = Math.floor(Math.random() * (max - min) ) + min;
     return randI;
 }
-let random3Number = randomDestGener(modesOfTransport);
+let random3Number = getRandNumber(0, modesOfTransport.length);
 let randomTransportation = modesOfTransport[randomNumber];
 console.log(randomTransportation);
 
 // (5 points): As a user, I want a form of entertainment to be randomly selected for my day trip.
 let entertainment = ['Movie theater','Axe throwing','Escape room','Zoo','Museum','AT&T stadium','Fort Worth stockyards'];
-function randomDestGener (array) {
-    let randI = Math.floor(Math.random()*array.length-1);
+function getRandNumber(min, max) {
+    let randI = Math.floor(Math.random() * (max - min) ) + min;
     return randI;
 }
-let random4Number = randomDestGener(entertainment);
+let random4Number = getRandNumber(0, entertainment.length);
 let randomEntertainment = entertainment[randomNumber];
 console.log(randomEntertainment);
 
