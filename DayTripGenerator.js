@@ -29,7 +29,8 @@ let randomEntertainment = entertainment[entertainNumber];
 console.log(randomEntertainment);
 
 // Ask user if satisfied with destination, restaurant, transportation, and entertainment?
-prompt ("Are you satisfied with the location, restaurant, mode of transportation, and entertainment? [Please type 'yes' or 'no'.]");
+prompt ("Are you satisfied with the location, restaurant, mode of transportation, and entertainment? If not, simply refresh the page for some new options!");
+
 // If user says 'no', go through remaining array options at random
 // How do I go through an array at random but remove the previously selected options from each future iteration?
 // if (userinput !== 'yes') {
