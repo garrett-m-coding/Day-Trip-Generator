@@ -1,63 +1,52 @@
 'use strict'
 //code below
 
-// Features: 
-// (5 points): As a developer, I want to make at least three commits.
-// (5 points): As a developer, I want all of my functions to have a Single Responsibility. 
-//             Remember, each function should do just one thing!
-
-// (5 points): As a user, I want a destination to be randomly selected for my day trip.
-// Create a function that randomly selects a destination in the Fort Worth area
-// i'll need to input an array of Fort Worth area destinations
-// after a destination is selected at random from the array, I need to return and console.log it
-// if the user doesn't like the destination then a new randomly selected destination needs to be selected
 console.log('Welcome & thank you for choosing the Fort Worth, Texas - Day Trip Planner!')
 
-let destinations = ['Crowley','Burleson','Mansfield','Saginaw','Keller','Arlington','Fort Worth'];
 function getRandNumber(min, max) {
     let randI = Math.floor(Math.random() * (max - min) ) + min;
     return randI;
 }
-let randomNumber = getRandNumber(0, destinations.length);
-let randomDestination = destinations[randomNumber];
+
+let destinations = ['Omni Fort Worth Hotel','Kimton Harper Hotel','The Ashton Hotel','Hilton Fort Worth','AC Hotel by Marriott','The Sinclair, Autograph Collection','The Worthington Renaissance Hotel'];
+let destNumber = getRandNumber(0, destinations.length);
+let randomDestination = destinations[destNumber];
 console.log(randomDestination);
 
-// (5 points): As a user, I want a restaurant to be randomly selected for my day trip.
-let restaurants = ['Restaurant A','Restaurant B','Restaurant C','Restaurant D','Restaurant E','Restaurant F','Restaurant G'];
-function getRandNumber(min, max) {
-    let randI = Math.floor(Math.random() * (max - min) ) + min;
-    return randI;
-}
-let random2Number = getRandNumber(0, restaurants.length);
-let randomRestaurant = restaurants[random2Number];
+let restaurants = ["Bonnell's Fine Texas Cuisine","Paris 7th","Ellerbe Fine Foods","Eddie V's","The Capital Grille","Silver Fox","Texas de Brazil"];
+let restNumber = getRandNumber(0, restaurants.length);
+let randomRestaurant = restaurants[restNumber];
 console.log(randomRestaurant);
 
-// (5 points): As a user, I want a mode of transportation to be randomly selected for my day trip.
-let modesOfTransport = ['Car','Individual Bicycle','Tandem Bicycle','Horse and Carriage','Walk','Jog','Roller Blade','Bus'];
-function getRandNumber(min, max) {
-    let randI = Math.floor(Math.random() * (max - min) ) + min;
-    return randI;
-}
-let random3Number = getRandNumber(0, modesOfTransport.length);
-let randomTransportation = modesOfTransport[randomNumber];
+let modesOfTransport = ['Car','Bicycle','Horse and Carriage','Walk','Electric Scooter','Roller Blade/Skate','Taxi/Rideshare'];
+let transportNumber = getRandNumber(0, modesOfTransport.length);
+let randomTransportation = modesOfTransport[transportNumber];
 console.log(randomTransportation);
 
-// (5 points): As a user, I want a form of entertainment to be randomly selected for my day trip.
-let entertainment = ['Movie theater','Axe throwing','Escape room','Zoo','Museum','AT&T stadium','Fort Worth stockyards'];
-function getRandNumber(min, max) {
-    let randI = Math.floor(Math.random() * (max - min) ) + min;
-    return randI;
-}
-let random4Number = getRandNumber(0, entertainment.length);
-let randomEntertainment = entertainment[randomNumber];
+let entertainment = ['Movie theater','Axe throwing','Escape room','Zoo','Museum','Main Event Entertainment','Fort Worth stockyards'];
+let entertainNumber = getRandNumber(0, entertainment.length);
+let randomEntertainment = entertainment[entertainNumber];
 console.log(randomEntertainment);
+
+// Ask user if satisfied with destination, restaurant, transportation, and entertainment?
+prompt ("Are you satisfied with the location, restaurant, mode of transportation, and entertainment? [Please type 'yes' or 'no'.]");
+// If user says 'no', go through remaining array options at random
+// How do I go through an array at random but remove the previously selected options from each future iteration?
+// if (userinput !== 'yes') {
+//     for (let index = 0; index < array.length; index++) {
+//     }
+// Or maybe I need to use a while loop?
+//     while (condition) {
+//     }
+// }
+// Ask user again if satisfied with destination, restaurant, transportation, and entertainment?
+// How do I include a prompt after each new iteration to the user?
+// If user says 'no', repeat the process until all array options presented
+// After presenting final option say to user "Sorry, I don't have any other ideas."
+
 
 // (15 points): As a user, I want to be able to randomly re-select a destination, restaurant, 
 //              mode of transportation, and/or form of entertainment if I don’t like one or more of those things.
-
-
 // (10 points): As a user, I want to be able to confirm that my day trip is “complete” once I 
 //              like all of the random selections.
-
-
-// (10 points): As a user, I want to display my completed trip in the console.
+// (10 points): As a user, I want to display my completed trip in the console. 
